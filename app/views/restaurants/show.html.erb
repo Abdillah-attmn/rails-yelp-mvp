@@ -1,0 +1,14 @@
+<h1><%= @restaurant.name %></h1>
+<div class="container">
+  <div class="row d-flex justify-content-between">
+    <div class = 'col'>
+      <p>adresse: <%= @restaurant.address %></p>
+      <p>categorie: <%= @restaurant.category %></p>
+      <p>N°: <%= @restaurant.phone_number %></p>
+    </div>
+    <div class='col'><%= button_to 'Reviews',  new_restaurant_review_path(@restaurant), class: 'btn-primary rounded ',method: :get %></div>
+  </div>
+</div>
+
+
+<%= link_to 'Back to list of restaurants', restaurants_path %>
